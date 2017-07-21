@@ -1,0 +1,53 @@
+/* Прибиваем футер к низу:
+1. Задаем футеру фиксированную высоту
+2. Растягиваем .wrapper на всю высоту окна, за счет 100% высоты body (global.scss)
+3. Натягиваем футер на .wrapper
+4. Создаем блочный псевдоэлемент следующий сразу за .wrapper, 
+   высотой равной высоте футера, который будет находится прямо под футером,
+   не позволяя контенту залазить под футер. (global.scss) */
+.footer {
+	// min-width: $container-width + 20px; /* Ширина .container + 10px по бокам, чтобы контент не прилипал к краям окна */
+	// overflow: hidden; /* Обрезаем все что будет выходить за пределы футера */
+	// width: $container-width;
+	height: $footer-height; /* 1 */
+	margin-top: -$footer-height; /* 3 */
+	background-color: $dark;
+	&__left, &__right {
+		float: left;
+		width: 50%;
+	}
+	&__left {
+		padding-top: 16px;
+	}
+	&__right {
+		padding-top: 10px;
+		text-align: right;
+		// margin: 10px 0;
+	}
+}
+
+.copyright {
+	font-size: 14px;
+	font-weight: 300;
+	color: $light-gray;
+}
+
+.socials__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 4px;
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.socials__icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+	fill: $light-gray;
+	transition: fill .5s;
+	&:hover {
+		fill: #fff;
+	}
+}

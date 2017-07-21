@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font: $base-font;
+	color: $gray;
+	-webkit-font-smoothing: antialiased;
+	background-color: $white;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+a:link, a:hover, a:active, a:visited {
+	outline: none;
+}
+
+b {
+	font-family: 'FiraSans', Arial, sans-serif;
+	font-weight: 500;
+}
+
+/* Создаем класс для очистки обтекания */
+.clearfix::before,
+.clearfix::after {
+	content: ' ';
+	display: block;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+.wrapper {
+	overflow: hidden; /* Обрезаем все что будет выходить за пределы .wrapper */
+	min-height: 100%; /* 2. Растягиваем .wrapper на всю высоту окна, за счет 100% высоты body */
+	&::after { /* 4. Создаем блочный псевдоэлемент для прибития футера к низу */
+		content: "";
+		display: block;
+		height: $footer-height;
+	}
+}
+
+.container {
+	width: $container-width;
+	margin: 0 auto;
+}
+
+// Описываем общий стиль для кнопок
+.button {
+	display: inline-block;
+	font: 14px/28px OpenSansBold;
+	color: $red;
+	padding: 4px 12px;
+	text-decoration: none;
+	border: 2px solid $red;
+	border-radius: 25px;
+	transition: all 0.3s;
+	&:hover {
+		background: $red;
+		color: $white;
+	}
+}
+
+.inlineLink {
+	text-decoration: none;
+	color: $blue;
+	font-weight: 400;
+	transition: all .3s;
+	&:hover {
+		color: $red;
+		// text-decoration: underline;
+	}
+}
+
+.popup {
+	display: none;
+	position: relative;
+	&__closeButton {
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	&__closeIcon {
+		display: block;
+		width: 16px;
+		height: 16px;
+		fill: #fff;
+		transition: fill .3s;
+		&:hover {
+			fill: $red;
+		}
+	}
+}
+
+/* Стилизвция скроллбара */
+::-webkit-scrollbar-track {
+	background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: $scroll-radius;
+	background-color: $scroll;
+	&:hover {
+		background-color: $gray;
+	}
+}
+
+::-webkit-scrollbar {
+	width: $scroll-width;
+}
+
+.fancybox-close-small {
+	display: none;
+}
+
+.fancybox-slide > * {
+	padding: 2px;
+}

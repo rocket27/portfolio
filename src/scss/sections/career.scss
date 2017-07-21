@@ -1,0 +1,121 @@
+.career__left {
+	width: 220px;
+	float: left;
+}
+
+.career__picture {
+	width: 220px;
+	border-radius: 9px;
+	overflow: hidden;
+}
+
+.career__image {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.career__right {
+	width: 455px;
+	float: right;
+}
+
+.job {
+	text-align: right;
+}
+
+.job__item {
+	padding-left: 70px;
+	margin-bottom: 20px;
+} 
+
+.job__block {
+	width: 380px;
+	background-color: $snow-white;
+	text-align: left;
+	border-radius: 10px;
+	padding: 15px 22px;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+	position: relative;
+	transition: background-color 0.3s;
+}
+
+.job__block::before, .job__block::after {
+	content: '';
+	display: block;
+	width: 1px;
+	background: #ddd;
+	position: absolute;
+	right: 100%;
+	margin-right: 18px;
+}
+
+.job__item:first-child .job__block::before, .job__item:last-child .job__block::after {
+	display: none;
+}
+.job__block::before {
+	top: 0;
+	bottom: 50%;
+}
+
+.job__block::after {
+	top: 50%;
+	bottom: -25px;
+}
+	
+.job__item:hover .job__block {
+	background-color: $blue;
+}
+
+.job__item:hover .job__title, .job__item:hover .job__occupation, .job__item:hover .job__duration {
+	color: $snow-white;
+}
+
+.job__item:hover .job__year {
+	color: $blue;
+	font-weight: 600;
+}
+
+.job__item:hover .job__year::after {
+	border: 5px solid #94e0f2;
+}
+
+.job__title {
+	font-size: 21px;
+	color: $dark-gray2;
+	transition: color 0.3s;
+}
+
+.job__occupation, .job__duration {
+	margin: 0;
+	font-weight: 300;
+	color: $dark-gray1;
+	transition: color 0.3s;
+}
+
+.job__year {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	color: $dark-gray1;
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	margin: -13px 35px 0 0;
+	transition: all 0.3s;
+	&::after {
+		content: '';
+		display: block;
+		width: 10px;
+		height: 10px;
+		background-color: $blue;
+		border: 5px solid $white;
+		border-radius: 50%;
+		position: absolute;
+		right: -26px;
+		top: 50%;
+		margin-top: -10px;
+		z-index: 5;
+		transition: all 0.3s;
+	}
+}

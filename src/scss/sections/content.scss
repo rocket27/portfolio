@@ -1,0 +1,23 @@
+.content {
+	padding-bottom: 50px;
+}
+
+.sidebar, .page {
+	float: left;
+}
+
+.sidebar {
+	width: 220px;	
+}
+
+.page {
+	width: 700px;
+	margin-left: 20px;
+}
+
+// Общий стиль для главного заголовка
+.title {
+	margin-bottom: 18px;
+	font-weight: 500;
+	color: $dark;
+}

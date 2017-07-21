@@ -1,0 +1,36 @@
+.navigation {
+	padding-top: 5px;
+}
+
+.navigation__link {
+	display: block;
+	text-align: right;
+	color: $dark;
+	text-decoration: none;
+	border-right: 6px solid transparent;
+	padding: 8px 22px 9px 0;
+	transition: color 0.3s;
+	&:hover {
+		color: $blue;
+	}
+	&:active {
+		font-weight: 600;
+		border-right: 6px solid $blue;
+	}
+}
+
+.navigation__icon, .navigation__title {
+	line-height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navigation__title {
+	margin-left: 4px;
+}
+
+.navigation__item_selected .navigation__link {
+	font-weight: 600;
+	color: $blue;
+	border-right: 6px solid $blue;
+}

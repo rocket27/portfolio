@@ -1,0 +1,28 @@
+@mixin window ($container-width) {
+	.container {
+		width: $container-width;
+	}
+	.page {
+		width: $container-width;
+	}
+}
+
+@mixin avatar_position ($avatar-width) {
+	.box {
+		margin-top: $avatar-width / 2;
+	}
+	.box__picture {
+		width: $avatar-width;
+		top: -$avatar-width / 2;
+	}
+}
+
+@mixin foot_height ($footer-height) {
+	.wrapper::after {
+		height: $footer-height;
+	}
+	.footer {
+		height: $footer-height;
+		margin-top: -$footer-height;
+	}
+}

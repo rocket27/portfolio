@@ -1,0 +1,157 @@
+@media screen and (max-width: 480px) {
+	
+	// global
+	@include window(95%);
+
+	.page {
+		width: 100%;
+	}
+
+	.title {
+		margin-bottom: 4px;
+	}
+
+	// index
+	.box {
+  		width: 300px;
+	}
+
+	// header
+	.header {
+		padding-bottom: 7px;
+		margin-bottom: 6px;
+	}
+
+	.header__left {
+		width: 80%;
+		padding-top: 9px;
+	}
+
+	.header__right {
+		width: 20%;
+		padding: 22px 3px 0 0;
+	}
+
+	.user__name {
+		font-size: 14px;
+		line-height: 21px;
+		max-width: 100px;
+		margin: 0 0 0 12px;
+	}
+
+	// sidebar
+	.navigation {
+		padding: 0;
+		&__item {
+			margin-right: 14px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__link {
+			font-size: 14px;
+		}
+		&__icon {
+			display: none;
+		}
+		&__title {
+			margin: 0;
+		}
+	}
+
+	// about
+	.about {
+		margin-top: 4px;
+	}
+
+	.about__right {
+		margin-bottom: 0;
+	}
+
+	.about__picture {
+		width: 150px;
+	}
+
+	.title_about {
+		margin: -2px 0 2px;
+	}
+
+	.about__description {
+		height: auto;
+		overflow: visible;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.text-block p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.skills {
+		padding: 0;
+	}
+
+	// career
+	.career {
+		margin-top: 2px;
+	}
+
+	.career__left {
+		margin-bottom: 12px;
+	}
+
+	.career__picture {
+		width: 218px;
+	}
+
+	.job__item {
+		display: block;
+	} 
+
+	.job__block {
+		width: 100%;
+	}
+
+	.job__title {
+		font-size: 18px;
+	}
+
+	.job__occupation, .job__duration {
+		font-size: 16px;
+	}
+
+	//portfolio
+	.portfolio {
+		float: none;
+	}
+
+	.title_portfolio {
+		margin-top: 18px;
+		margin-bottom: 15px;
+	}
+
+	.project {
+		margin-left: 0;
+		&__item {
+			display: block;
+			width: 220px;
+			margin: 0 auto 20px;
+		}
+		&__link {
+			width: 100%;
+		}
+	}
+
+	// footer
+	@include foot_height(114px);
+
+	.socials__item {
+		margin-right: 20px;
+	}
+
+	.socials__icon {
+		width: 30px;
+		height: 30px;
+	}
+}

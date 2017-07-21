@@ -1,0 +1,75 @@
+.about__left {
+	width: 320px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+.about__right {
+	width: 380px;
+}
+
+.about__left, .about__right {
+	float: left;
+}
+
+.about__picture {
+	display: inline-block;
+	width: 230px;
+	border: 5px solid $snow-white;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.about__image {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.title_about {
+	margin-bottom: 12px;
+}
+	
+.about__description {
+	height: 320px;
+	overflow: auto;
+	color: $gray;
+	margin-bottom: 56px;
+}
+
+.text-block {
+	font-weight: 300;
+	& p {
+		margin: 0 0 8px 0;
+	}
+}
+
+.skills {
+	padding-left: 10px;
+	&__item {
+		background: url('../../img/decor/tick.png') no-repeat left top;
+		padding-left: 30px;
+	}
+}
+
+.about__download {
+	text-align: right;
+}
+
+.button__icon {
+	margin-right: 4px;
+}
+
+.button_download {
+	transition: all 0.3s;
+	&:hover {
+		color: $white;
+	}
+}
+
+.thumbCertificate__image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
